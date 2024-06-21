@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <style>
+        button{
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!--<table id="Calculator">
+        <tr>
+           <td colspan="3">
+            <input type="text" id="result">
+           </td>
+           <td>
+            <input type="button" value="c"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7"></td>
+            <td><input type="button" value="8"></td>
+            <td><input type="button" value="9"></td>
+            <td><input type="button" value="/"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4"></td>
+            <td><input type="button" value="5"></td>
+            <td><input type="button" value="6"></td>
+            <td><input type="button" value="*"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1"></td>
+            <td><input type="button" value="2"></td>
+            <td><input type="button" value="3"></td>
+            <td><input type="button" value="-"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="0"></td>
+            <td><input type="button" value="."></td>
+            <td><input type="button" value="+"></td>
+            <td><input type="button" value="="></td>
+        </tr>
+
+    </table>-->
+    <div class="container">
+        <h1 class="alert alert-info" style="text-align: center;">Calculator</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                
+            </div>
+            <div class="col-sm-4">
+                <input type="text" class="form-control bg-info" name="" value="" id="txt1">
+                <table class="table table-bordered">
+                    <tr>
+                        <td class="p-0">
+                            <button style="border-radius:0%; color:light;" class="btn btn-dark w-100" onclick="fun1(this)">1</button>
+                        </td>
+                        <td class="p-0">
+                            <button style="border-radius:0%; color:light;" class="btn btn-dark w-100"  onclick="fun1(this)">2</button>
+                        </td>
+                        <td class="p-0">
+                            <button style="border-radius:0%; color:light;" class="btn btn-dark w-100"  onclick="fun1(this)">3</button>
+                        </td>
+                        <td class="p-0">
+                            <button style="border-radius:0%; color:light;" class="btn btn-dark w-100"  onclick="fun1(this)">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-0">
+                            <button style="border-radius:0%; color:light;" class="btn btn-dark w-100"  onclick="fun1(this)">4</button>
+                        </td>
+                        <td class="p-0">
+                            <button style="border-radius:0%; color:light;" class="btn btn-dark w-100"  onclick="fun1(this)">5</button>
+                        </td>
+                        <td class="p-0">
+                            <button style="border-radius:0%; color:light;" class="btn btn-dark w-100"  onclick="fun1(this)">6</button>
+                        </td>
+                        <td class="p-0">
+                            <button style="border-radius:0%; color:light;" class="btn btn-dark w-100"  onclick="fun1(this)">-</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-0">
+                            <button style="border-radius:0%; color:light;" class="btn btn-dark w-100"  onclick="fun1(this)">7</button>
+                        </td>
+                        <td class="p-0">
+                            <button style="border-radius:0%; color:light;" class="btn btn-dark w-100"  onclick="fun1(this)">8</button>
+                        </td>
+                        <td class="p-0">
+                            <button style="border-radius:0%; color:light;" class="btn btn-dark w-100"  onclick="fun1(this)">9</button>
+                        </td>
+                        <td class="p-0">
+                            <button style="border-radius:0%; color:light;" class="btn btn-dark w-100"  onclick="fun1(this)">*</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-0">
+                            <button style="border-radius:0%; color:light;" class="btn btn-dark w-100"  onclick="fun1(this)">0</button>
+                        </td>
+                        <td class="p-0">
+                            <button style="border-radius:0%; color:light;" class="btn btn-dark w-100"  onclick="fun1(this)">/</button>
+                        </td>
+                        <td class="p-0">
+                            <button style="border-radius:0%; color:light;" class="btn btn-dark w-100"  onclick="fun1(this)">.</button>
+                        </td>
+                        <td class="p-0">
+                            <button style="border-radius:0%; color:light;" class="btn btn-dark w-100"  onclick="fun1(this)">%</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-0">
+                            <button style="border-radius:0%; color:light;" class="btn btn-dark w-100"  onclick="fun1(this)">Sqrt</button>
+                        </td>
+                        <td class="p-0">
+                            <button style="border-radius:0%; color:light;" class="btn btn-dark w-100"  onclick="fun1(this)">**</button>
+                        </td>
+                        <td class="p-0">
+                            <button style="border-radius:0%; color:light;" class="btn btn-dark w-100"  onclick="fun1(this)">C</button>
+                        </td>
+                        <td class="p-0">
+                            <button style="border-radius:0%; color:light;" class="btn btn-dark w-100"  onclick="fun1(this)">=</button>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-sm-4">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function fun1(btn){
+        let txtBox=document.getElementById("txt1"); 
+        let oldval=txtBox.value;
+        //oldval=""
+        let newval=btn.innerHTML;
+        if(newval=="="){
+            txtBox.value=eval(oldval);
+        }else if(newval=="C"){
+            txtBox.value="";
+        }else{
+            txtBox.value=oldval+newval;
+        }
+
+    }
+</script>

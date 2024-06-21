@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <h1>Sum of the numbers</h1>
+    <div class="container">
+        
+            <div >
+                <input class="form-control bg-success" id="f1" type="text" placeholder="First Number">
+            </div>
+            <div >
+                <input class="form-control bg-success" id="l1"  type="text" placeholder="second Number">
+            </div>
+            <div>
+                <button class="btn btn-warning" onclick="fun1(this)">add..!</button>
+                <button class="btn btn-warning" onclick="fun1(this)">sub..!</button>
+                <button class="btn btn-warning" onclick="fun1(this)">multi..!</button>
+                <button class="btn btn-warning" onclick="fun1(this)">div..!</button>
+
+            </div>
+    
+    </div>
+</body>
+</html>
+<script>
+    /*function fun1(){
+        let first=document.getElementById("f1");
+        let second=document.getElementById("l1");
+        let add=parseInt(first.value);
+        let add1=parseInt(second.value);
+        let c=add+add1;
+        let d=add-add1;
+        let e=add*add1;
+        let f=add/add1;
+        alert(c);
+        alert(d);
+        alert(e);
+        alert(f);
+    }*/
+   function fun1(ele){
+    let first=document.getElementById("f1");
+    let second=document.getElementById("l1");
+    let add=parseInt(first.value);
+    let add1=parseInt(second.value);
+    let c=0;
+    if(ele.innerHTML=="add..!"){
+        c=add+add1;
+    }else if(ele.innerHTML=="sub..!"){
+        c=add-add1;
+    }
+    else if(ele.innerHTML=="multi..!"){
+        c=add*add1;
+    }
+    else if(ele.innerHTML=="div..!") 
+    {
+        c=add/add1;
+    }
+    alert(c);
+   }
+</script>

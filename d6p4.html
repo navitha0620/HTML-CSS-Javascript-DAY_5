@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .h1,.p1{
+            background-color: rgb(156, 231, 206);
+            padding:20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1  id="h1" class="h1">Pakistan</h1>
+    <p id="p1" class="p1">Pakistan is going to won the match!</p>
+    <button class="btn btn-danger" onclick="func1()">Announce winner</button>
+</body>
+</html>
+<script>
+    function func1(){
+        var h1Ele=document.getElementById("h1");
+        h1Ele.innerHTML="India";
+        var p1Ele=document.getElementById("p1");
+        p1Ele.innerHTML="India won the match";
+    }
+</script>

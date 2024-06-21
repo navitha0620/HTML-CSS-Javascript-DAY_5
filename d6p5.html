@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <h1 class="alert alert-info">Concat Example</h1>
+    <div class="container">
+        <form>
+            <div >
+                <input class="form-control bg-success" id="f1" type="text" placeholder="Enter firstname">
+            </div>
+            <div >
+                <input class="form-control bg-success" id="l1"  type="text" placeholder="Enter lastname">
+            </div>
+            <div>
+                <button class="btn btn-warning" onclick="fun1()">Click me to Concat...!</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    function fun1(){
+        let fname=document.getElementById("f1");
+        let lname=document.getElementById("l1");
+        let fullname=fname.value + lname.value;
+        alert(fullname);
+    }
+</script>
